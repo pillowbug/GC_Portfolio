@@ -1,4 +1,31 @@
-// Specific CSS for your home-page
-body {
-  background: white;
+nav {
+  height: 80px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  img {
+    width: 224px;
+    height: auto;
+  }
+  ul {
+    padding-right: 16px;
+  }
+  li {
+    display: inline-block;
+    padding: 0px 16px;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  background-color: #4361EE;
+}
+
+.hero-inner {
+  grid-column-start: 2;
+  h1{
+    margin: 16px auto;
+  }
 }

@@ -1,31 +1,18 @@
-nav {
-  height: 80px; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-  img {
-    width: 224px;
-    height: auto;
-  }
-  ul {
-    padding-right: 16px;
-  }
-  li {
-    display: inline-block;
-    padding: 0px 16px;
-  }
-}
-
 .hero {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 15% auto 15%;
+  grid-template-columns: 15% 35% 35% 15%;
   background-color: #4361EE;
+  // clip-path: ;
 }
 
 .hero-inner {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   grid-column-start: 2;
-  h1{
-    margin: 16px auto;
+  h1 {
+    font-size: 96px;
+    // margin: 16px 0px;
   }
 }

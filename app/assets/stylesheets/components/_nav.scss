@@ -1,9 +1,11 @@
 nav {
   height: 80px; 
+  width: 100%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4361EE;
+  background-color: transparent;
   color: white;
   img {
     width: 224px;

@@ -26,3 +26,13 @@ body {
 .text-center {
   text-align: center;
 }
+
+.highlight::before {
+  content:'';
+  width:60px;
+  height:4px;
+  background: #DD1C1A;
+  position:absolute;
+  border-radius: 50px;
+  margin-top: -8px;
+}

@@ -9,11 +9,45 @@
         <i class="fas fa-arrow-down animated infinite flash delay-1s"></i>
     </div>
 </div>
-<div id="projects">
+<div id="project-section">
     <div class="project-intro">
         <h2 class="highlight">Projects</h2>
     </div>
-    <div class="project">
-
+    <div class="projects">
+        <div id="project-tabs">
+            <a @click="selectTab(1)" href="#">Affini</a>
+            <a @click="selectTab(2)" href="#">Edumate</a>
+            <a @click="selectTab(3)" href="#">TheStraySheep</a>
+        </div>
+        <div v-if="currentTab == 1" class="project-container">
+            <p>
+          Tab 1 content
+            </p>
+        </div>
+        <div v-if="currentTab == 3" class="project-container">
+            <p>
+              tab 2 content 
+            </p>
+        </div>
+        <div v-if="currentTab == 3" class="project-container">
+            <p>
+            tab 3 content
+            </p>
+        </div>
     </div>
 </div>
+
+<script>
+    el:".projects"
+    props: {
+        value: String
+    },
+    data: function(){
+        return { currentTab: 1 }
+    },
+    methods:{
+        selectTab(selectedTab){
+            this.currentTab = selectedTab
+        }
+    }
+</script>

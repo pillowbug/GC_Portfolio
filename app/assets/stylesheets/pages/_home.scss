@@ -1,9 +1,9 @@
 .hero {
   height: 100vh;
   display: grid;
-  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 90% 10%;
-  background-color: #4361EE;
+  background-color: #06AED5;
   // clip-path: ;
 }
 
@@ -19,6 +19,10 @@
   }
 }
 
+.animated {
+  animation-duration: 3s;
+}
+
 .scroll {
   display: flex;
   flex-direction: column;
@@ -29,5 +33,21 @@
 
 #projects {
   display: grid;
-  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 10% 10% auto 10%;
+  padding-top: 32px;
+  min-height: 100vh;
+  h2 {
+    font-size: 64px;
+  }
+}
+
+.project-intro {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.projects {
+  grid-column-start: 2 / span 2;
+  grid-row-start: 3;
 }

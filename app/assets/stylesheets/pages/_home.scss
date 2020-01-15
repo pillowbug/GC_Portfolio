@@ -47,14 +47,22 @@
   grid-row-start: 2;
 }
 
-.projects {
+#projects {
   grid-column: 2 / span 2;
   grid-row-start: 3;
+  a {
+    background-color: white;
+    border: none;
+    color: #086788;
+  }
 }
 
-tab {
-  display: inline-block;
+.active-tab {
+  color: #06AED5 !important;
+}
 
+.project-container {
+  display: flex;
 }
 
 .project-desc {

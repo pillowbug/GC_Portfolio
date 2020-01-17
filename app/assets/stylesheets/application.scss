@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+//text rules
+p { 
+  line-height: 32px;
+}
+
 //utitlity classes
 body {
   height: 100%;
@@ -27,11 +32,31 @@ body {
   text-align: center;
 }
 
-.highlight::before {
+.highlight-red::before {
   content:'';
   width:60px;
   height:4px;
   background: #DD1C1A;
+  position:absolute;
+  border-radius: 50px;
+  margin-top: -8px;
+}
+
+.highlight-ylw::before {
+  content:'';
+  width:60px;
+  height:4px;
+  background: #F0C808;
+  position:absolute;
+  border-radius: 50px;
+  margin-top: -8px;
+}
+
+.highlight-blu::before {
+  content:'';
+  width:60px;
+  height:4px;
+  background: #06AED5;
   position:absolute;
   border-radius: 50px;
   margin-top: -8px;

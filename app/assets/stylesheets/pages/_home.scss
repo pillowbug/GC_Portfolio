@@ -63,15 +63,19 @@
   .about-inner-right{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 32px;
     grid-column-start: 3;
     grid-row: 2 / span 2;
-    background-color: white;
     color: #5E6472;
-    box-shadow: 24px 24px 0px rgb(32, 32, 32);
   }
   h2 {
     font-size: 64px;
+  }
+  .about-content {
+    background-color: white;
+    padding: 32px;
+    box-shadow: 24px 24px 0px rgb(32, 32, 32);
   }
 }
 
@@ -103,6 +107,9 @@
     min-width: 4em;
     padding-right: 24px;
   }
+  h2 {
+    color: #5E6472;
+  }
   #project-tabs {
     margin-top: 32px;
     a {
@@ -124,6 +131,7 @@
   display: flex;
   min-height: 560px;
   transition: all 0.2s ease;
+  box-shadow: 24px 24px 0px;
 }
 
 .project-desc {

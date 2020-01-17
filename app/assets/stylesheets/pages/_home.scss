@@ -83,6 +83,7 @@
   grid-template-rows: 10% 10% auto 10%;
   padding-top: 32px;
   min-height: 100vh;
+  background-color: #AED9E0;
   h2 {
     font-size: 64px;
   }
@@ -102,31 +103,27 @@
     min-width: 4em;
     padding-right: 24px;
   }
-  h3 {
-    padding-top: 1em;
-  }
   #project-tabs {
-    padding-top: 32px;
+    margin-top: 32px;
     a {
       font-family: "Poppins", "Sans-serif";
       transition: all 0.25s ease;
       text-decoration: none;
-      border-bottom: 0px solid #DD1C1A;
-    }
-    a:hover {
-      border-bottom: 5px solid #F0C808;
+      background-color: #efefef;
+      padding: 24px;
     }
   }
 }
 
 .active-tab {
   color: #06AED5 !important;
-  border-bottom: 5px solid #F0C808;
+  background-color: white !important;
 }
 
 .project-container {
   display: flex;
-  min-height: 500px;
+  min-height: 560px;
+  transition: all 0.2s ease;
 }
 
 .project-desc {
@@ -134,7 +131,8 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  padding: 32px 0px;
+  padding: 32px; 
+  background-color: white;
 }
 
 .project-image {
@@ -143,4 +141,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }

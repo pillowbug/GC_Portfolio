@@ -2,8 +2,8 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 10% 40% 40% 10%;
-  grid-template-rows: 90% 10%;
-  background-color: #06AED5;
+  grid-template-rows: 80% 10% 5% 5%;
+  background-color: #5E6472;
   // clip-path: ;
 }
 
@@ -13,6 +13,7 @@
   text-align: left;
   justify-content: center;
   grid-column-start: 2;
+  grid-row: 1 / span 2;
   h1 {
     font-size: 96px;
     // margin: 16px 0px;
@@ -27,9 +28,54 @@
   display: flex;
   flex-direction: column;
   grid-column: 2 / span 2;
+  grid-row: 3;
   justify-content: flex-end;
-  padding-bottom: 32px;
 }
+
+#about {
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 10% 10% auto 10%;
+  min-height: 100vh;
+  background-color: #B8F2E6;
+  .about-inner-left {
+    display: flex;
+    align-items: center;
+    grid-column-start: 2;
+    grid-row: 2 / span 2;
+    p {
+      font-family: "Playfair Display", "Serif";
+      color: #5E6472;
+    }
+    li {
+      font-family: "Poppins", "Sans-serif";
+      color: #5E6472;
+      list-style-type: none;
+      font-size: 48px;
+      position: relative;
+      transition: all 0.5s ease;
+    }
+    li:hover {
+      transform: scale(1.1);
+      bottom: 0;
+    }
+  }
+  .about-inner-right{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    grid-column-start: 3;
+    grid-row: 2 / span 2;
+    background-color: white;
+    color: #5E6472;
+    box-shadow: 24px 24px 0px rgb(32, 32, 32);
+  }
+  h2 {
+    font-size: 64px;
+  }
+}
+
+
 
 #project-section {
   display: grid;
@@ -52,32 +98,43 @@
   grid-row-start: 3;
   a {
     background-color: white;
-    // border: 1px solid grey;
     color: #086788;
     min-width: 4em;
-    padding: 0 2em;
+    padding-right: 24px;
   }
   h3 {
     padding-top: 1em;
   }
   #project-tabs {
-    padding-bottom: 1em;
-    border-bottom: 1px solid red;
+    padding-top: 32px;
+    a {
+      font-family: "Poppins", "Sans-serif";
+      transition: all 0.25s ease;
+      text-decoration: none;
+      border-bottom: 0px solid #DD1C1A;
+    }
+    a:hover {
+      border-bottom: 5px solid #F0C808;
+    }
   }
 }
 
 .active-tab {
   color: #06AED5 !important;
+  border-bottom: 5px solid #F0C808;
 }
 
 .project-container {
   display: flex;
+  min-height: 500px;
 }
 
 .project-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
-  height: 100%;
-  padding: 32px;
+  padding: 32px 0px;
 }
 
 .project-image {

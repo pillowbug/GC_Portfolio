@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   display: grid;
-  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-template-rows: 80% 10% 5% 5%;
   background-color: #5E6472;
   // clip-path: ;
@@ -12,11 +12,24 @@
   flex-direction: column;
   text-align: left;
   justify-content: center;
-  grid-column-start: 2;
+  grid-column: 3 / span 3;
   grid-row: 1 / span 2;
+  z-index: 2;
+  padding-left: 80px;
   h1 {
     font-size: 96px;
     // margin: 16px 0px;
+  }
+}
+
+.headshot {
+  display: flex;
+  align-items: center;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  img {
+    box-shadow: 24px 24px 0;
+    max-width: 480px;
   }
 }
 
@@ -27,7 +40,7 @@
 .scroll {
   display: flex;
   flex-direction: column;
-  grid-column: 2 / span 2;
+  grid-column: 3 / span 2;
   grid-row: 3;
   justify-content: flex-end;
 }
@@ -63,15 +76,19 @@
   .about-inner-right{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 32px;
     grid-column-start: 3;
     grid-row: 2 / span 2;
-    background-color: white;
     color: #5E6472;
-    box-shadow: 24px 24px 0px rgb(32, 32, 32);
   }
   h2 {
     font-size: 64px;
+  }
+  .about-content {
+    background-color: white;
+    padding: 32px;
+    box-shadow: 24px 24px 0px rgb(32, 32, 32);
   }
 }
 
@@ -103,6 +120,9 @@
     min-width: 4em;
     padding-right: 24px;
   }
+  h2 {
+    color: #5E6472;
+  }
   #project-tabs {
     margin-top: 32px;
     a {
@@ -124,6 +144,7 @@
   display: flex;
   min-height: 560px;
   transition: all 0.2s ease;
+  box-shadow: 24px 24px 0px;
 }
 
 .project-desc {

@@ -49,6 +49,7 @@
   grid-template-rows: 10% 10% auto 10%;
   min-height: 100vh;
   background-color: #B8F2E6;
+  padding-top: 32px;
   .about-inner-left {
     display: flex;
     align-items: center;
@@ -99,6 +100,7 @@
   padding-top: 32px;
   min-height: 100vh;
   background-color: #AED9E0;
+  padding-top: 32px;
   h2 {
     font-size: 64px;
   }
@@ -107,6 +109,9 @@
 .project-intro {
   grid-column-start: 2;
   grid-row-start: 2;
+  h2 {
+    color: #5E6472;
+  }
 }
 
 #projects {
@@ -117,9 +122,6 @@
     color: #086788;
     min-width: 4em;
     padding-right: 24px;
-  }
-  h2 {
-    color: #5E6472;
   }
   #project-tabs {
     margin-top: 32px;
@@ -132,19 +134,16 @@
     }
   }
 }
-
 .active-tab {
   color: #06AED5 !important;
   background-color: white !important;
 }
-
 .project-container {
   display: flex;
   min-height: 560px;
   transition: all 0.2s ease;
   box-shadow: 24px 24px 0px;
 }
-
 .project-desc {
   display: flex;
   flex-direction: column;
@@ -153,7 +152,6 @@
   padding: 32px; 
   background-color: white;
 }
-
 .project-image {
   width: 50%;
   padding: 32px;
@@ -307,6 +305,23 @@
     }
     .mini-footer {
       padding-top: 64px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  nav ul {
+    display: none;
+  }
+  #about {
+    padding: 16px;
+
+  }
+  #projects {
+    #project-tabs {
+      a {
+        padding: 16px;
+      }
     }
   }
 }

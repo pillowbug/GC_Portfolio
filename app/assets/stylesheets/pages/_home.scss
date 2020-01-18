@@ -234,6 +234,9 @@
   .order2 {
     order: 2;
   }
+  .order3 {
+    order: 3;
+  }
   #about {
     display: flex;
     flex-direction: column;
@@ -251,5 +254,42 @@
       align-items: center;
       text-align: center;
     }    
+  }
+  #project-section {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 16px 16px 0;
+    padding: 32px;
+    .project-intro h2 {
+      font-size: 42px;
+    }
+    .project-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 16px 16px 0;
+      .project-image img {
+        width: 90%;
+        height: auto;
+
+      }
+      .project-desc, .project-image {
+        width: 100%;
+      }
+    }
+  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    .form-container {
+      box-shadow: 16px 16px 0px;
+    }
+    .contact-right h2 {
+      font-size: 42px;
+    }
+    .mini-footer {
+      padding-top: 64px;
+    }
   }
 }

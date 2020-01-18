@@ -39,7 +39,7 @@
             <a :class="{ 'active-tab' : currentTab == 3 }" @click.prevent="selectTab(3)" href="">THESTRAYSHEEP</a>
         </div>
         <div v-if="currentTab == 1" class="project-container">
-            <div class="project-desc">
+            <div class="project-desc order2">
                 <h3>Affini</h3>
                 <p>Affini is a relationship manager aimed at helping people nurture new connections and maintain current ones. </p>
                 <p>Built as part of a two-week product sprint at Le Wagon's bootcamp, Affini was built by me and three other team members to showcase everything we've learned over the course of the program. </p>
@@ -47,33 +47,33 @@
                 <a href="www.affini.me">Visit the site</a>
                 <a href="https://github.com/pillowbug/Affini">Peep the code</a>
             </div>
-            <div class="project-image">
+            <div class="project-image order1">
                 <%= image_tag "affini_vid.gif", :size => "500x273" %>
             </div>
         </div>
         <div v-if="currentTab == 2" class="project-container">
-            <div class="project-desc">
+            <div class="project-desc order2">
                 <h3>Edumate</h3>
                 <p>Edumate is a peer-to-peer class sharing platform. Users can take classes taught by other users while also being able to host their own classes.</p>
                 <p>Developed over the course of one week, this marketplace app was our first group project, cementing our practices of pair programming, version control practices through Git and Github, as well as collaboration and the bootcamp curriculum. </p>
             </div>
-            <div class="project-image">
+            <div class="project-image order1">
                 <%= image_tag  "edumate_vid.gif", :size => "500x273" %>
             </div>
         </div>
         <div v-if="currentTab == 3" class="project-container">
-            <div class="project-desc">
+            <div class="project-desc order2">
                 <h3>TheStraySheep</h3>
                 <p>This is a personal project developed over the course of Le Wagon's full-stack development bootcamp. It was built to demonstrate many-to-many associations in a relational database. It was also an opportunity to demonstrate our design abilities and knowledge of front-end technologies. </p>
             </div>
-            <div class="project-image">
+            <div class="project-image order1">
                 <%= image_tag  "straysheep_vid.gif", :size => "500x273" %>
             </div>
         </div>
     </div>
 </div>
 <div id="contact">
-    <div class="contact-left">
+    <div class="contact-left order2">
         <div class="form-container">
             <form action="https://formspree.io/xknjqbeo" method="POST">
                 <label>
@@ -88,14 +88,14 @@
             </form>
         </div>
     </div>
-    <div class="contact-right">
+    <div class="contact-right order1">
         <h2 class="highlight-blu">Wanna talk? Hit me up!</h2>
         <p>Looking for a new teammate? Want to collaborate on a project? Maybe you just want to grab coffee and talk about whatever's on your mind.</p>
         <p>Shoot me an email. I'll do my best to get back to you as soon as I can.</p>
         <p>Peace and blessings,</p>
         <p>Gerard</p>
     </div>
-    <div class="mini-footer">
+    <div class="mini-footer order3">
         <p>Made with love, coffee, and the power of anime.</p>
         <ul class="social">
             <li><a href="https://www.linkedin.com/in/gerard-cabarse/"><i class="fab fa-linkedin-in"></i></a></li>

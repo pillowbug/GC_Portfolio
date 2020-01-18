@@ -4,7 +4,6 @@
   grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-template-rows: 80% 10% 5% 5%;
   background-color: #5E6472;
-  // clip-path: ;
 }
 
 .hero-inner {
@@ -163,4 +162,67 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 10% 10% auto 10%;
+  min-height: 100vh;
+  background-color: #FAF3DD;
+  color: #5E6472;
+  .contact-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-row: 2 / span 2 ;
+    .form-container {
+      width: 80%;
+      background-color: white;
+      padding: 32px;
+      box-shadow: 24px 24px 0px;
+      label {
+        display: block;
+        input, textarea {
+          width: 100%;
+        }
+      }
+      button {
+        background-color: transparent;
+        border: 1px solid black;
+      }
+    }
+  }
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column-start: 3;
+    grid-row: 2 / span 2;
+    padding: 32px;
+    h2 {
+      font-size: 72px;
+    }
+  }
+  .mini-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / span 2;
+    grid-row: 4;
+    ul {
+      padding: 0;
+    }
+    li  {
+      display: inline-block;
+      list-style-type: none;
+      text-decoration: none;
+      padding: 0 32px;
+    }
+    a {
+      color: #5E6472;
+    }
+  }
 }

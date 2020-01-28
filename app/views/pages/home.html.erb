@@ -16,13 +16,45 @@
     <div class="about-inner-left order2">
         <ul id="tech-list">
             <p>I work in: </p>
-            <li v-for="tech in techList">{{ tech.item }}</li>
+            <li> 
+                <h3>Front-End</h3>
+                <div class="features hidden">
+                    <ul>
+                        <li>HTML + CSS</li>
+                        <li>Javascript</li>
+                        <li>Wordpress Development</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+            </li>
+            <li> 
+                <h3>Back-End</h3> 
+                <div class="features hidden">
+                    <ul>
+                        <li>Ruby</li>
+                        <li>Ruby On Rails</li>
+                        <li>SQL + PostgreSQL</li>
+                        <li>Git + Github</li>
+                    </ul>
+                </div>
+            </li>
+            <li> 
+                <h3>Design</h3>
+                <div class="features hidden">
+                    <ul>
+                        <li>Sketch</li>
+                        <li>Figma</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
     <div class="about-inner-right order1">
         <h2 class="highlight-blu">About Me</h2>
         <div class="about-content">
-            <p>I'm freshly minted developer. After completing Le Wagon's Full-Stack Development program in Tokyo, I've gained the tools to continue learning and grow into a badass front-end developer.</p>
+            <p>After completing Le Wagon's Full-Stack Development program in Tokyo, I've gained the tools to continue learning and grow into a fully-formed front-end developer.</p>
             <p>I love integrating design and development. I've set my sights on creating experiences for users that are both elegant and functional. </p>
             <p>Outside of development, I'm a multi-instrumentalist playing in different groups in the bay area. I live for the best bowls of ramen and Magic: The Gathering. </p>
         </div>
@@ -109,19 +141,14 @@
 </div>
 
 <script>
-    var techList = new Vue ({
-        el: "#tech-list",
-        data: {
-            techList: [
-                { item: 'HTML + CSS' },
-                { item: 'JavaScript' },
-                { item: 'Ruby On Rails' },
-                { item: 'Wordpress' },
-                { item: 'SQL + PostgreSQL' }
-            ]
-        }
-    })
 
+    const accordion = () => {
+        const accTab = document.querySelector('.features');
+        accTab.addEventListener('click', (event ) => {
+            console.log('hello');
+        });
+    }
+ 
     var slideTab = new Vue ({
         el:"#projects",
         props: {

@@ -16,9 +16,9 @@
     <div class="about-inner-left order2">
         <ul id="tech-list">
             <p>I work in: </p>
-            <li> 
+            <li class="panel"> 
                 <h3>Front-End</h3>
-                <div class="features hidden">
+                <div class="features">
                     <ul>
                         <li>HTML + CSS</li>
                         <li>Javascript</li>
@@ -27,9 +27,10 @@
                     </ul>
                 </div>
             </li>
-            <li> 
+            
+ <li class="panel"> 
                 <h3>Back-End</h3> 
-                <div class="features hidden">
+                <div class="features">
                     <ul>
                         <li>Ruby</li>
                         <li>Ruby On Rails</li>
@@ -38,9 +39,9 @@
                     </ul>
                 </div>
             </li>
-            <li> 
+            <li class="panel"> 
                 <h3>Design</h3>
-                <div class="features hidden">
+                <div class="features">
                     <ul>
                         <li>Sketch</li>
                         <li>Figma</li>
@@ -48,7 +49,8 @@
                         <li>Illustrator</li>
                     </ul>
                 </div>
-            </li>
+            </li> 
+
         </ul>
     </div>
     <div class="about-inner-right order1">
@@ -142,13 +144,21 @@
 
 <script>
 
-    const accordion = () => {
-        const accTab = document.querySelector('.features');
-        accTab.addEventListener('click', (event ) => {
-            console.log('hello');
+    const accordionTabs = () => {
+        const tabs = document.querySelectorAll('.panel');
+        tabs.forEach( panel => {
+            panel.addEventListener('click', event => {
+                const content = document.querySelectorAll('.features');
+                if (content.classList.contains('active')) {
+                    content.classList.remove('active');
+                } else {
+                    content.classList.add('active');
+                };
+            });
         });
-    }
- 
+    };
+    accordionTabs();
+
     var slideTab = new Vue ({
         el:"#projects",
         props: {

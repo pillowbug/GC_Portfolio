@@ -121,7 +121,7 @@
       width: 0;
     }
     a.accordion:hover:before {
-      width: 75%;
+      width: 60%;
     }
     a.accordion.active:before {
       height: 100%;
@@ -374,9 +374,16 @@
   }
   #about {
     padding: 16px;
-  }
-  a.accordion:hover:before {
-    width: 75%;
+    
+   #accordion-container {
+    a.accordion:hover:before {
+      width: 100%;
+    }
+    a.accordion.active:before {
+      width: 100%;
+      opacity: 100%;
+    }
+   }
   }
   #projects {
     #project-tabs {

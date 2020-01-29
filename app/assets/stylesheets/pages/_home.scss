@@ -63,7 +63,7 @@
       font-family: "Poppins", "Sans-serif";
       color: #5E6472;
       list-style-type: none;
-      font-size: 48px;
+      font-size: 18px;
       position: relative;
       transition: all 0.5s ease;
     }
@@ -95,6 +95,7 @@
     border: none;
     position: relative;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
   a.accordion::before {
     content: '';
@@ -102,20 +103,17 @@
     bottom: 3px; 
     height: 6px; 
     left: 0; 
-    width: 100%; 
+    width: 0%; 
     background: #F7C939; 
-    z-index: -1;
+    transition: all 0.3s ease;
   }
-  a.accordion::before:hover {
+  a.accordion:hover {
     width: 100%;
   }
   .accordion-content {
-    display: none;
-    transition: all 0.5s ease;
-    margin-bottom: 32px;
-    li {
-      font-size: 32px;
-    }
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
 
 }

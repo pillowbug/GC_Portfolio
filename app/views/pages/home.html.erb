@@ -17,7 +17,7 @@
         <div id="accordion-container">
         <p>I work in: </p>
             <a class="accordion">
-                <h2>Front-End</h2>
+                <h2><i class="fas fa-chevron-right"></i> Front-End</h2>
             </a>
             <div class="accordion-content">
                 <ul>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <a class="accordion">
-                <h2>Back-End</h2>
+                <h2><i class="fas fa-chevron-right"></i> Back-End</h2>
             </a>
             <div class="accordion-content">
                  <ul>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
             <a class="accordion">
-                <h2>Design</h2>
+                <h2><i class="fas fa-chevron-right"></i> Design</h2>
             </a>
             <div class="accordion-content">
                 <ul>
@@ -144,6 +144,7 @@
     var accordions =  document.getElementsByClassName("accordion");
     for (var i = 0; i < accordions.length; i++) {
         accordions[i].onclick = function() {
+            this.classList.toggle('active');
             var content = this.nextElementSibling;
             if (content.style.maxHeight){
                 content.style.maxHeight = null; 

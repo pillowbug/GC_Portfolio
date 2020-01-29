@@ -63,7 +63,7 @@
       font-family: "Poppins", "Sans-serif";
       color: #5E6472;
       list-style-type: none;
-      font-size: 48px;
+      font-size: 18px;
       position: relative;
       transition: all 0.5s ease;
     }
@@ -84,6 +84,64 @@
     background-color: white;
     padding: 32px;
     box-shadow: 24px 24px 0px rgb(32, 32, 32);
+  }
+  .panel {
+    border-bottom: 1px solid #5E6472;
+  }
+  #accordion-container {
+    width: 100%;
+    a.accordion {
+      color: #5E6472;
+      display: block;
+      background: none;
+      border: none;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      z-index: 3;
+    }
+    .fas {
+      display: inline-block; 
+      transition: all 0.3s ease;
+      content: "\f054";
+      font-size: 32px;
+      vertical-align: middle;
+    }
+    a.accordion:before {
+      content: '';
+      position: absolute; 
+      bottom: 3px; 
+      height: 6px; 
+      left: 0; 
+      height: 10%; 
+      background: #fff; 
+      transition: all 0.3s ease;
+      z-index: -1;
+      opacity: 100%;
+      width: 0;
+    }
+    a.accordion:hover:before {
+      width: 75%;
+    }
+    a.accordion.active:before {
+      height: 100%;
+      opacity: 100%;
+      z-index: -1;
+      box-shadow: 12px 12px 0px;
+    }
+    a.accordion.active .fas {
+      transform: rotate(90deg);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+      z-index: 2;
+    }
+    a.accordion.active:before {
+      width: 75%;
+      opacity: 100%;
+    }
   }
 }
 
@@ -220,6 +278,12 @@
   }
 }
 
+@media only screen and (max-width: 1260px) {
+  .project-image img {
+    width: 420px;
+    height: auto; 
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .order1 {
@@ -259,11 +323,10 @@
       font-size: 42px;
     }
     .about-inner-left {
-      padding-top: 32px;
+      padding: 64px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      text-align: center;
+      align-items: center;  
     }    
   }
   #project-section {

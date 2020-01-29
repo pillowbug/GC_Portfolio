@@ -14,10 +14,41 @@
 </div>
 <div id="about">
     <div class="about-inner-left order2">
-        <ul id="tech-list">
-            <p>I work in: </p>
-            <li v-for="tech in techList">{{ tech.item }}</li>
-        </ul>
+        <div id="accordion-container">
+        <p>I work in: </p>
+            <a class="accordion">
+                <h2><i class="fas fa-chevron-right"></i> Front-End</h2>
+            </a>
+            <div class="accordion-content">
+                <ul>
+                    <li>HTML + CSS</li>
+                    <li>Javascript (ES6, Vue.js)</li>
+                    <li>Wordpress</li>
+                    <li>Sass</li>
+                </ul>
+            </div>
+            <a class="accordion">
+                <h2><i class="fas fa-chevron-right"></i> Back-End</h2>
+            </a>
+            <div class="accordion-content">
+                 <ul>
+                    <li>Ruby</li>
+                    <li>Ruby on Rails</li>
+                    <li>SQL + PostgreSQL</li>
+                    <li>Heroku</li>
+                </ul>
+            </div>
+            <a class="accordion">
+                <h2><i class="fas fa-chevron-right"></i> Design</h2>
+            </a>
+            <div class="accordion-content">
+                <ul>
+                    <li>Sketch</li>
+                    <li>Figma</li>
+                    <li>Photoshop + Illustrator</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="about-inner-right order1">
         <h2 class="highlight-blu">About Me</h2>
@@ -109,18 +140,19 @@
 </div>
 
 <script>
-    var techList = new Vue ({
-        el: "#tech-list",
-        data: {
-            techList: [
-                { item: 'HTML + CSS' },
-                { item: 'JavaScript' },
-                { item: 'Ruby On Rails' },
-                { item: 'Wordpress' },
-                { item: 'SQL + PostgreSQL' }
-            ]
+
+    var accordions =  document.getElementsByClassName("accordion");
+    for (var i = 0; i < accordions.length; i++) {
+        accordions[i].onclick = function() {
+            this.classList.toggle('active');
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null; 
+            } else {                
+                content.style.maxHeight = content .scrollHeight + "px"; 
+            };
         }
-    })
+    };
 
     var slideTab = new Vue ({
         el:"#projects",

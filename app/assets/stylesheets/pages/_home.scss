@@ -374,7 +374,9 @@
   }
   #about {
     padding: 16px;
-
+  }
+  a.accordion:hover:before {
+    width: 75%;
   }
   #projects {
     #project-tabs {

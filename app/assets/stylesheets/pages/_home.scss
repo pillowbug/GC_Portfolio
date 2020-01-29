@@ -85,6 +85,39 @@
     padding: 32px;
     box-shadow: 24px 24px 0px rgb(32, 32, 32);
   }
+  .panel {
+    border-bottom: 1px solid #5E6472;
+  }
+  a.accordion {
+    color: #5E6472;
+    display: block;
+    background: none;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  a.accordion::before {
+    content: '';
+    position: absolute; 
+    bottom: 3px; 
+    height: 6px; 
+    left: 0; 
+    width: 100%; 
+    background: #F7C939; 
+    z-index: -1;
+  }
+  a.accordion::before:hover {
+    width: 100%;
+  }
+  .accordion-content {
+    display: none;
+    transition: all 0.5s ease;
+    margin-bottom: 32px;
+    li {
+      font-size: 32px;
+    }
+  }
+
 }
 
 

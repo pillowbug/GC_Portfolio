@@ -1,65 +1,70 @@
 <%= render "shared/nav" %>
-<div class="hero">
-    <div class="hero-inner text-white">
-        <h1 class="highlight-ylw">Howdy!</h1>
-        <h2>I'm Gerard, a web-developer based out of San Francisco. <span style="color: #F0C808;">I like to make neat things!</span> I dig UX/UI design + development, pop-punk, and ramen. </h2>
-    </div>
-    <div class="headshot">
-        <%= image_tag  "headshot.jpg" %>
-    </div>
-    <div class="scroll text-white text-center">
-        <p>【ｓｃｒｏｌｌ　ｆｏｒ　ｇｏｏｄｎｅｓｓ】</p>
-        <i class="fas fa-arrow-down animated infinite flash delay-1s"></i>
+<div id="hero-container">
+    <div class="hero">
+        <div class="hero-inner text-white">
+            <h1 class="highlight-ylw">Howdy!</h1>
+            <h2>I'm Gerard, a web-developer based out of San Francisco. <span style="color: #F0C808;">I like to make neat things!</span> I dig UX/UI design + development, pop-punk, and ramen. </h2>
+        </div>
+        <div class="headshot">
+            <%= image_tag  "headshot.jpg" %>
+        </div>
+        <div class="scroll text-white text-center">
+            <p>【ｓｃｒｏｌｌ　ｆｏｒ　ｇｏｏｄｎｅｓｓ】</p>
+            <i class="fas fa-arrow-down animated infinite flash delay-1s"></i>
+        </div>
     </div>
 </div>
 <div id="about">
-    <div class="about-inner-left order2">
-        <div id="accordion-container">
-        <p>I work in: </p>
-            <a class="accordion">
-                <h2><i class="fas fa-chevron-right"></i> Front-End</h2>
-            </a>
-            <div class="accordion-content">
-                <ul>
-                    <li>HTML + CSS</li>
-                    <li>Javascript (ES6, Vue.js)</li>
-                    <li>Wordpress</li>
-                    <li>Sass</li>
-                </ul>
-            </div>
-            <a class="accordion">
-                <h2><i class="fas fa-chevron-right"></i> Back-End</h2>
-            </a>
-            <div class="accordion-content">
-                 <ul>
-                    <li>Ruby</li>
-                    <li>Ruby on Rails</li>
-                    <li>SQL + PostgreSQL</li>
-                    <li>Heroku</li>
-                </ul>
-            </div>
-            <a class="accordion">
-                <h2><i class="fas fa-chevron-right"></i> Design</h2>
-            </a>
-            <div class="accordion-content">
-                <ul>
-                    <li>Sketch</li>
-                    <li>Figma</li>
-                    <li>Photoshop + Illustrator</li>
-                </ul>
+    <div class="about-container">
+        <div class="about-inner-left order2">
+            <div id="accordion-container">
+            <p>I work in: </p>
+                <a class="accordion">
+                    <h2><i class="fas fa-chevron-right"></i> Front-End</h2>
+                </a>
+                <div class="accordion-content">
+                    <ul>
+                        <li>HTML + CSS</li>
+                        <li>Javascript (ES6, Vue.js)</li>
+                        <li>Wordpress</li>
+                        <li>Sass</li>
+                    </ul>
+                </div>
+                <a class="accordion">
+                    <h2><i class="fas fa-chevron-right"></i> Back-End</h2>
+                </a>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Ruby</li>
+                        <li>Ruby on Rails</li>
+                        <li>SQL + PostgreSQL</li>
+                        <li>Heroku</li>
+                    </ul>
+                </div>
+                <a class="accordion">
+                    <h2><i class="fas fa-chevron-right"></i> Design</h2>
+                </a>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Sketch</li>
+                        <li>Figma</li>
+                        <li>Photoshop + Illustrator</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="about-inner-right order1">
-        <h2 class="highlight-blu">About Me</h2>
-        <div class="about-content">
-            <p>I'm freshly minted developer. After completing Le Wagon's Full-Stack Development program in Tokyo, I've gained the tools to continue learning and grow into a badass front-end developer.</p>
-            <p>I love integrating design and development. I've set my sights on creating experiences for users that are both elegant and functional. </p>
-            <p>Outside of development, I'm a multi-instrumentalist playing in different groups in the bay area. I live for the best bowls of ramen and Magic: The Gathering. </p>
+        <div class="about-inner-right order1">
+            <h2 class="highlight-blu">About Me</h2>
+            <div class="about-content">
+                <p>I'm freshly minted developer. After completing Le Wagon's Full-Stack Development program in Tokyo, I've gained the tools to continue learning and grow into a badass front-end developer.</p>
+                <p>I love integrating design and development. I've set my sights on creating experiences for users that are both elegant and functional. </p>
+                <p>Outside of development, I'm a multi-instrumentalist playing in different groups in the bay area. I live for the best bowls of ramen and Magic: The Gathering. </p>
+            </div>
         </div>
     </div>
 </div>
-<div id="project-section">
+<section id="projects-container">
+    <div id="project-section">
     <div class="project-intro">
         <h2 class="highlight-ylw">Projects</h2>
     </div>
@@ -107,37 +112,40 @@
         </div>
     </div>
 </div>
-<div id="contact">
-    <div class="contact-left order2">
-        <div class="form-container">
-            <form action="https://formspree.io/xknjqbeo" method="POST">
-                <label>
-                Your email:
-                <input type="text" name="_replyto">
-                </label>
-                <label>
-                Your message:
-                <textarea name="message"></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
+</section>
+<section id="contact-container">
+    <div id="contact">
+        <div class="contact-left order2">
+            <div class="form-container">
+                <form action="https://formspree.io/xknjqbeo" method="POST">
+                    <label>
+                    Your email:
+                    <input type="text" name="_replyto">
+                    </label>
+                    <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="contact-right order1">
+            <h2 class="highlight-blu">Let's talk</h2>
+            <p>Looking for a new teammate? Want to collaborate on a project? Shoot me an email. I'll respond to you within 24 hours. </p>
+            <p>Be well!</p>
+            <p>Gerard</p>
+        </div>
+        <div class="mini-footer order3">
+            <p>Made with love, coffee, and the power of anime.</p>
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/gerard-cabarse/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.facebook.com/gerard.sleeptalkers" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://github.com/pillowbug/" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
         </div>
     </div>
-    <div class="contact-right order1">
-        <h2 class="highlight-blu">Let's talk</h2>
-        <p>Looking for a new teammate? Want to collaborate on a project? Shoot me an email. I'll respond to you within 24 hours. </p>
-        <p>Be well!</p>
-        <p>Gerard</p>
-    </div>
-    <div class="mini-footer order3">
-        <p>Made with love, coffee, and the power of anime.</p>
-        <ul class="social">
-            <li><a href="https://www.linkedin.com/in/gerard-cabarse/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://www.facebook.com/gerard.sleeptalkers" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://github.com/pillowbug/" target="_blank"><i class="fab fa-github"></i></a></li>
-        </ul>
-    </div>
-</div>
+</section>
 
 <script>
 

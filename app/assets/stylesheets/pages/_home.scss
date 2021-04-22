@@ -5,7 +5,7 @@
 }
 
 .hero {
-  height: 100vh;
+  padding: 120px 0;
   width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -34,7 +34,7 @@
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
   img {
-    box-shadow: 24px 24px 0  rgb(32, 32, 32);
+    box-shadow: 24px 24px 0  rgba(32, 32, 32, 0.5);
     max-width: 480px;
   }
 }
@@ -56,6 +56,7 @@
   display: block;
   width: 100%;
   background-color: #B8F2E6;
+  padding: 120px 0; 
 }
 
 #about {
@@ -64,9 +65,7 @@
   margin: 0 auto;
   grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 10% 10% auto 10%;
-  min-height: 100vh;
   background-color: #B8F2E6;
-  padding-top: 32px;
   .about-inner-left {
     display: flex;
     align-items: center;
@@ -89,7 +88,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 32px;
     grid-column-start: 3;
     grid-row: 2 / span 2;
     color: #5E6472;
@@ -100,8 +98,7 @@
   .about-content {
     background-color: white;
     padding: 32px;
-    box-shadow: 24px 24px 0px rgb(32, 32, 32);
-  }
+    box-shadow: 16px 16px 0px  rgba(32, 32, 32, 0.5); }
   .panel {
     border-bottom: 1px solid #5E6472;
   }
@@ -144,7 +141,7 @@
       height: 100%;
       opacity: 100%;
       z-index: -1;
-      box-shadow: 12px 12px 0px  rgb(32, 32, 32);
+      box-shadow: 12px 12px 0px  rgba(32, 32, 32, 0.5);
     }
     a.accordion.active .fas {
       transform: rotate(90deg);
@@ -174,12 +171,7 @@
   margin: 0 auto;
   grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 10% 10% auto 10%;
-  padding-top: 32px;
-  min-height: 100vh;
-  padding-top: 32px;
-  h2 {
-    font-size: 64px;
-  }
+  padding: 120px 0;
 }
 
 .project-intro {
@@ -187,6 +179,7 @@
   grid-row-start: 2;
   h2 {
     color: #5E6472;
+    font-size: 64px;
   }
 }
 
@@ -199,6 +192,7 @@
     min-width: 4em;
     padding-right: 24px;
   }
+  
   #project-tabs {
     margin-top: 32px;
     a {
@@ -218,7 +212,7 @@
   display: flex;
   min-height: 560px;
   transition: all 0.2s ease;
-  box-shadow: 24px 24px 0px  rgb(32, 32, 32);
+  box-shadow: 24px 24px 0px  rgba(32, 32, 32, 0.5);
 }
 .project-desc {
   display: flex;
@@ -251,7 +245,7 @@
   margin: 0 auto;
   grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 10% 10% auto 10%;
-  min-height: 100vh;
+  padding: 120px 0;
   background-color: #FAF3DD;
   color: #5E6472;
   .contact-left {
@@ -264,7 +258,7 @@
       width: 80%;
       background-color: white;
       padding: 32px;
-      box-shadow: 24px 24px 0px  rgb(32, 32, 32);
+      box-shadow: 16px 16px 0px  rgba(32, 32, 32, 0.5);
       label {
         display: block;
         input, textarea {
@@ -285,7 +279,7 @@
     grid-row: 2 / span 2;
     padding: 32px;
     h2 {
-      font-size: 72px;
+      font-size: 64px !important;
     }
   }
   .mini-footer {
@@ -333,7 +327,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 120px 32px;
     h1 {
       font-size: 64px;
     }
@@ -349,7 +343,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 32px;
+    padding: 120px 32px;
     ul {
       padding: 0;
     }
@@ -357,18 +351,20 @@
       font-size: 32px;
     }
     .about-inner-left {
-      padding: 64px;
+      padding: 64px 64px 0 64px;
       display: flex;
       justify-content: center;
       align-items: center;  
     }    
   }
+  #about-container {
+    padding: 0;
+  }
   #project-section {
     display: flex;
     width: 100%;
     flex-direction: column;
-    box-shadow: 16px 16px 0  rgb(32, 32, 32);
-    padding: 32px;
+    padding: 0;
     .project-intro h2 {
       font-size: 42px;
     }
@@ -376,7 +372,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      box-shadow: 16px 16px 0  rgb(32, 32, 32);
+      box-shadow: 16px 16px 0  rgba(32, 32, 32, 0.5);
       .project-image img {
         width: 90%;
         height: auto;
@@ -409,8 +405,7 @@
     display: none;
   }
   #about {
-    padding: 16px;
-    
+  padding: 80px 32px;
    #accordion-container {
     a.accordion:hover:before {
       width: 100%;
@@ -421,10 +416,13 @@
     }
    }
   }
+  #project-container {
+    padding: 80px 32px;
+  }
   #projects {
     #project-tabs {
       a {
-        padding: 8px;
+        padding: 6px;
       }
     }
   }
